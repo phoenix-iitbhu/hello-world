@@ -23,17 +23,14 @@ def print_board(board):
 			print ()
 			
 def print_instruction():
-	print ("Please use the following cell numbers to make your move")
+	print ("Use the following cell numbers to make your move")
 	print_board([1,2,3,4,5,6,7,8,9])
          
 
 def get_input(turn):
-    
-
-	valid = False
-	while not valid:
+	while True:
 		try:
-			user = input("Where would you like to place " + turn + " (1-9)? ")
+			user = input("Where would you like to place "+ turn + "\n")
 			user = int(user)
 			if user >= 1 and user <= 9:
 				return user-1
